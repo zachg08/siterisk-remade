@@ -334,7 +334,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo">THE INN COLLECTION</div>
+        <div class="logo">RISK MANAGEMENT SYSTEM</div>
         <div class="header-actions">
             <div class="header-btn">
                 <span>📢</span>
@@ -352,7 +352,10 @@
                 <span>⚙️</span>
                 <span>Settings</span>
             </div>
-            <div class="user-info">Kevin McEneaney ▼</div>
+            <div class="header-btn">
+                <span>👤</span>
+                <span>Sign In</span>
+            </div>
         </div>
     </div>
 
@@ -364,28 +367,28 @@
             <div class="sidebar-item" onclick="showPage('monitoring')">
                 📊 Monitoring
             </div>
-            <div class="sidebar-item">
+            <div class="sidebar-item" onclick="showPage('audits')">
                 📋 Audits
             </div>
-            <div class="sidebar-item">
+            <div class="sidebar-item" onclick="showPage('helpline')">
                 ⓘ Helpline
             </div>
-            <div class="sidebar-item">
+            <div class="sidebar-item" onclick="showPage('fire')">
                 🔥 Fire
             </div>
-            <div class="sidebar-item">
+            <div class="sidebar-item" onclick="showPage('registry')">
                 🏢 Registry
             </div>
-            <div class="sidebar-item">
+            <div class="sidebar-item" onclick="showPage('training')">
                 👥 Training
             </div>
-            <div class="sidebar-item">
+            <div class="sidebar-item" onclick="showPage('risk-assessment')">
                 ⚖️ Risk Assessment
             </div>
-            <div class="sidebar-item">
+            <div class="sidebar-item" onclick="showPage('documents')">
                 📄 Documents
             </div>
-            <div class="sidebar-item">
+            <div class="sidebar-item" onclick="showPage('policy')">
                 📑 Policy
             </div>
         </div>
@@ -488,6 +491,62 @@
                     <p>No content available yet</p>
                 </div>
             </div>
+
+            <div id="audits-page" class="monitoring-page">
+                <div class="empty-state">
+                    <h2>Audits</h2>
+                    <p>No content available yet</p>
+                </div>
+            </div>
+
+            <div id="helpline-page" class="monitoring-page">
+                <div class="empty-state">
+                    <h2>Helpline</h2>
+                    <p>No content available yet</p>
+                </div>
+            </div>
+
+            <div id="fire-page" class="monitoring-page">
+                <div class="empty-state">
+                    <h2>Fire</h2>
+                    <p>No content available yet</p>
+                </div>
+            </div>
+
+            <div id="registry-page" class="monitoring-page">
+                <div class="empty-state">
+                    <h2>Registry</h2>
+                    <p>No content available yet</p>
+                </div>
+            </div>
+
+            <div id="training-page" class="monitoring-page">
+                <div class="empty-state">
+                    <h2>Training</h2>
+                    <p>No content available yet</p>
+                </div>
+            </div>
+
+            <div id="risk-assessment-page" class="monitoring-page">
+                <div class="empty-state">
+                    <h2>Risk Assessment</h2>
+                    <p>No content available yet</p>
+                </div>
+            </div>
+
+            <div id="documents-page" class="monitoring-page">
+                <div class="empty-state">
+                    <h2>Documents</h2>
+                    <p>No content available yet</p>
+                </div>
+            </div>
+
+            <div id="policy-page" class="monitoring-page">
+                <div class="empty-state">
+                    <h2>Policy</h2>
+                    <p>No content available yet</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -496,14 +555,32 @@
             const sidebarItems = document.querySelectorAll('.sidebar-item');
             sidebarItems.forEach(item => item.classList.remove('active'));
             
-            if (page === 'dashboard') {
-                document.getElementById('dashboard-page').style.display = 'block';
-                document.getElementById('monitoring-page').classList.remove('active');
-                sidebarItems[0].classList.add('active');
-            } else if (page === 'monitoring') {
-                document.getElementById('dashboard-page').style.display = 'none';
-                document.getElementById('monitoring-page').classList.add('active');
-                sidebarItems[1].classList.add('active');
+            // Hide all pages
+            document.getElementById('dashboard-page').style.display = 'none';
+            document.querySelectorAll('.monitoring-page').forEach(p => p.classList.remove('active'));
+            
+            // Show selected page and activate sidebar item
+            const pageMap = {
+                'dashboard': { element: 'dashboard-page', sidebarIndex: 0, useStyle: true },
+                'monitoring': { element: 'monitoring-page', sidebarIndex: 1 },
+                'audits': { element: 'audits-page', sidebarIndex: 2 },
+                'helpline': { element: 'helpline-page', sidebarIndex: 3 },
+                'fire': { element: 'fire-page', sidebarIndex: 4 },
+                'registry': { element: 'registry-page', sidebarIndex: 5 },
+                'training': { element: 'training-page', sidebarIndex: 6 },
+                'risk-assessment': { element: 'risk-assessment-page', sidebarIndex: 7 },
+                'documents': { element: 'documents-page', sidebarIndex: 8 },
+                'policy': { element: 'policy-page', sidebarIndex: 9 }
+            };
+            
+            if (pageMap[page]) {
+                const pageInfo = pageMap[page];
+                if (pageInfo.useStyle) {
+                    document.getElementById(pageInfo.element).style.display = 'block';
+                } else {
+                    document.getElementById(pageInfo.element).classList.add('active');
+                }
+                sidebarItems[pageInfo.sidebarIndex].classList.add('active');
             }
         }
     </script>
