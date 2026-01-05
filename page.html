@@ -486,65 +486,261 @@
             </div>
 
             <div id="monitoring-page" class="monitoring-page">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Monitoring</h1>
+                        <div class="page-subtitle">Track and manage defects</div>
+                    </div>
+                </div>
                 <div class="empty-state">
-                    <h2>Monitoring</h2>
-                    <p>No content available yet</p>
+                    <h2>No defects to monitor</h2>
+                    <p>All systems are running smoothly</p>
                 </div>
             </div>
 
             <div id="audits-page" class="monitoring-page">
-                <div class="empty-state">
-                    <h2>Audits</h2>
-                    <p>No content available yet</p>
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Audits</h1>
+                        <div class="page-subtitle">Compliance and inspection records</div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">Scheduled Audits</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Upcoming audits this month</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Completed Audits</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">This year</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Compliance Rate</div>
+                        <div class="percentage">0%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div id="helpline-page" class="monitoring-page">
-                <div class="empty-state">
-                    <h2>Helpline</h2>
-                    <p>No content available yet</p>
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Helpline</h1>
+                        <div class="page-subtitle">Support and assistance</div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">📞 Emergency Contacts</div>
+                        <div class="card-subtitle" style="margin-bottom: 1rem;">Available 24/7</div>
+                        <p style="color: #666; margin-bottom: 0.5rem;">Emergency: 999</p>
+                        <p style="color: #666; margin-bottom: 0.5rem;">Health & Safety: TBD</p>
+                        <p style="color: #666;">Support Line: TBD</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Open Tickets</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Support requests</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Average Response Time</div>
+                        <div class="defect-number open" style="font-size: 2.5rem;">--</div>
+                        <div class="card-subtitle">Hours</div>
+                    </div>
                 </div>
             </div>
 
             <div id="fire-page" class="monitoring-page">
-                <div class="empty-state">
-                    <h2>Fire</h2>
-                    <p>No content available yet</p>
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Fire Safety</h1>
+                        <div class="page-subtitle">Fire risk management and prevention</div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">🔥 Fire Drills</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Completed this year</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Equipment Checks</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Due this month</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Fire Extinguishers</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Requiring inspection</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Alarm Tests</div>
+                        <div class="percentage">0%</div>
+                        <div class="card-subtitle">Completion rate</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div id="registry-page" class="monitoring-page">
-                <div class="empty-state">
-                    <h2>Registry</h2>
-                    <p>No content available yet</p>
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Registry</h1>
+                        <div class="page-subtitle">Location and asset management</div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">Total Locations</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Registered sites</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Active Assets</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Equipment tracked</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Maintenance Due</div>
+                        <div class="defect-number overdue">0</div>
+                        <div class="card-subtitle">Assets requiring service</div>
+                    </div>
                 </div>
             </div>
 
             <div id="training-page" class="monitoring-page">
-                <div class="empty-state">
-                    <h2>Training</h2>
-                    <p>No content available yet</p>
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Training</h1>
+                        <div class="page-subtitle">Staff training and development</div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">👥 Active Employees</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Registered users</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Training Completion</div>
+                        <div class="percentage">0%</div>
+                        <div class="card-subtitle">This quarter</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Certifications Due</div>
+                        <div class="defect-number overdue">0</div>
+                        <div class="card-subtitle">Renewals needed</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Upcoming Courses</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Scheduled trainings</div>
+                    </div>
                 </div>
             </div>
 
             <div id="risk-assessment-page" class="monitoring-page">
-                <div class="empty-state">
-                    <h2>Risk Assessment</h2>
-                    <p>No content available yet</p>
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Risk Assessment</h1>
+                        <div class="page-subtitle">Identify and manage risks</div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">⚠️ High Risk Items</div>
+                        <div class="defect-number overdue">0</div>
+                        <div class="card-subtitle">Require immediate attention</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Medium Risk Items</div>
+                        <div class="defect-number" style="color: #f39c12;">0</div>
+                        <div class="card-subtitle">Monitor closely</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Low Risk Items</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Standard monitoring</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Assessments Due</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">This month</div>
+                    </div>
                 </div>
             </div>
 
             <div id="documents-page" class="monitoring-page">
-                <div class="empty-state">
-                    <h2>Documents</h2>
-                    <p>No content available yet</p>
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Documents</h1>
+                        <div class="page-subtitle">Document library and management</div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">📄 Total Documents</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Files in library</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Documents Expiring</div>
+                        <div class="defect-number overdue">0</div>
+                        <div class="card-subtitle">Next 30 days</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Recent Uploads</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Last 7 days</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Pending Review</div>
+                        <div class="defect-number" style="color: #f39c12;">0</div>
+                        <div class="card-subtitle">Awaiting approval</div>
+                    </div>
                 </div>
             </div>
 
             <div id="policy-page" class="monitoring-page">
-                <div class="empty-state">
-                    <h2>Policy</h2>
-                    <p>No content available yet</p>
+                <div class="page-header">
+                    <div class="page-title">
+                        <h1>Policy</h1>
+                        <div class="page-subtitle">Company policies and procedures</div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-title">📑 Active Policies</div>
+                        <div class="defect-number open">0</div>
+                        <div class="card-subtitle">Current policies</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Policy Reviews Due</div>
+                        <div class="defect-number overdue">0</div>
+                        <div class="card-subtitle">Require updates</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Staff Acknowledgments</div>
+                        <div class="percentage">0%</div>
+                        <div class="card-subtitle">Completion rate</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">Draft Policies</div>
+                        <div class="defect-number" style="color: #f39c12;">0</div>
+                        <div class="card-subtitle">Under development</div>
+                    </div>
                 </div>
             </div>
         </div>
